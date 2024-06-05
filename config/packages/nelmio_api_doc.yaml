@@ -1,0 +1,42 @@
+nelmio_api_doc:
+  models:
+    names:
+      - { alias: PutHomeOrder, type: App\Documentation\PutHomeOrder }
+      - { alias: PutHomeTimer, type: App\Documentation\PutHomeTimer }
+      - { alias: PutHomeImage, type: App\Documentation\PutHomeImage }
+      - { alias: PostHomeImage, type: App\Documentation\PostHomeImage }
+      - { alias: DeleteHomeImage, type: App\Documentation\DeleteHomeImage }
+      - { alias: PostWork, type: App\Documentation\PostWork }
+      - { alias: PutWork, type: App\Documentation\PutWork }
+      - { alias: PutWorkOrder, type: App\Documentation\PutWorkOrder }
+      - { alias: PostWorkImage, type: App\Documentation\PostWorkImage }
+      - { alias: PutWorkImage, type: App\Documentation\PutWorkImage }
+      - { alias: PutWorkImageOrder, type: App\Documentation\PutWorkImageOrder }
+      - { alias: PutImage, type: App\Documentation\PutImage }
+
+  documentation:
+    info:
+      title: Api
+      description: This is an awesome app!
+      version: 1.0.0
+  areas:
+    default:
+      path_patterns:
+        - ^/api
+    api:
+      path_patterns:
+        - ^/api
+      documentation:
+        info:
+          title: UntoldWorlds
+          description: API
+          version: 0.0.1
+        components:
+          securitySchemes:
+            Token:
+              type: apiKey
+              name: authorization
+              in: header
+        security:
+          - Token: []
+  
